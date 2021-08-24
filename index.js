@@ -6,6 +6,7 @@ import todoList from './routes/todo.js';
 const app = express();
 const PORT = 5000;
 
+app.use(bodyParser.json());
 app.use('/todo', todoList);
 
 app.get('/', (req, res) => {
